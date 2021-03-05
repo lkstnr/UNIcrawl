@@ -3,6 +3,7 @@ version: "3.8"
 services:
   db:
     image: mysql:8.0.23
+    container_name: unicrawl_db
     restart: on-failure
     environment:
       MYSQL_ROOT_PASSWORD: root2mysql
@@ -13,12 +14,6 @@ services:
       - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
-
-  adminer:
-    image: adminer:4.8.0
-    restart: on-failure
-    ports:
-      - 8080:8080
 
   unicrawl:
     build: .

@@ -90,7 +90,7 @@ class UnicrawlPipeline:
     def mysql_create_table(self):
         cursor = self.cnx.cursor()
         sql_query = (
-            "CREATE TABLE IF NOT EXISTS `" + self.mysql_table +"` ("
+            "CREATE TABLE IF NOT EXISTS `" + self.mysql_table + "` ("
             "  `id` mediumint NOT NULL AUTO_INCREMENT,"
             "  `url` text NOT NULL,"
             "  `html` mediumtext NOT NULL,"
@@ -108,7 +108,6 @@ class UnicrawlPipeline:
             self.logger.debug("Table OK")
 
         cursor.close()
-
 
     def close_spider(self, spider):
         self.cnx.close()

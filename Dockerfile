@@ -9,7 +9,7 @@ COPY scrapyd.conf /etc/scrapyd/scrapyd.conf
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt && rm /tmp/requirements.txt
 
-COPY src/ /code/
+COPY src/ .
 
 EXPOSE 6800
 ENTRYPOINT "/usr/local/bin/scrapyd"

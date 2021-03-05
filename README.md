@@ -36,8 +36,7 @@ Beim ersten Start kann das etwas Zeit in Anspruch nehmen, da Docker-Images herun
 Folgende Ausgabe bestätigt das erfolgreiche Starten der Docker-Container:
 
 ```
-# Starting unicrawl_adminer_1 ... done
-# Starting unicrawl_db_1      ... done
+# Starting unicrawl_db        ... done
 # Starting unicrawl           ... done
 ```
 
@@ -80,8 +79,7 @@ docker-compose stop
 Folgende Ausgabe bestätigt das erfolgreiche Stoppen der Docker-Container:
 
 ```
-# Stopping unicrawl_adminer_1 ... done
-# Stopping unicrawl_db_1      ... done
+# Stopping unicrawl_db        ... done
 # Stopping unicrawl           ... done
 ```
 
@@ -89,8 +87,8 @@ Folgende Ausgabe bestätigt das erfolgreiche Stoppen der Docker-Container:
 
 Nach dem **Starten der Docker-Container** sollten folgende Dienste laufen:
 
-- **MySQL-Server** mit Benutzer **unicrawl**, Passwort **scrapy2mysql**, Datenbank **unicrawl**
-- **Adminer** zur Verwaltung der Datenbank, erreichbar unter `http://localhost:8080`
+- **MySQL-Server**, erreichbar unter `http://localhost:3306`
+  - mit Benutzer **unicrawl**, Passwort **scrapy2mysql**, Datenbank **unicrawl**
 - **Scrapyd**, zum Monitoring laufender Spider (Crawler), erreichbar unter `http://localhost:6800`
 
 Eventuell müssen Anpassungen vorgenommen werden, damit die Dienste unter [localhost erreichbar sind](https://www.jhipster.tech/tips/020_tip_using_docker_containers_as_localhost_on_mac_and_windows.html).
