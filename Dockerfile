@@ -12,4 +12,4 @@ RUN pip install -r /tmp/requirements.txt && rm /tmp/requirements.txt
 COPY src/ .
 
 EXPOSE 6800
-ENTRYPOINT "/usr/local/bin/scrapyd"
+ENTRYPOINT ["/usr/local/bin/scrapyd", "--pidfile="]
